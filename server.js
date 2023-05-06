@@ -38,7 +38,7 @@ app.post("/upload", upload.single("file"), async (req, res) => {
     });
     console.log(candidateDate);
     await candidateDate.save();
-    res.status(201).send("Candidate has successfully registered...");
+    res.status(201).send("<h1>Candidate has successfully registered...🥳</h1>");
   } catch (err) {
     res.status(400).send(err.message);
   }
