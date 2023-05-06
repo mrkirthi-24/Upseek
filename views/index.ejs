@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UpSeek - Upload Your profile!</title>
+  </head>
+  <body style="margin: 0%">
+    <header style="width: 100%">
+      <nav
+        style="
+          display: flex;
+          justify-content: space-between;
+          padding: 2% 6%;
+          box-shadow: 0 5px 5px rgba(0, 0, 0, 0.4);
+        "
+      >
+        <h2>YourHR</h2>
+        <div>
+          <h3>Full Stack Engineer role</h3>
+          <p style="margin-top: -20px">Remote, India</p>
+        </div>
+      </nav>
+    </header>
+    <section style="display: flex; padding: 2% 6%; flex-direction: column">
+      <h2>Personal Information:</h2>
+      <form
+        action="/upload"
+        method="POST"
+        style="
+          display: grid;
+          gap: 2rem;
+          grid-template-columns: 1fr 1fr;
+          font-size: large;
+        "
+        enctype="multipart/form-data"
+      >
+        <div style="display: flex; flex-direction: column">
+          <label for="fname">First name *</label>
+          <input
+            type="text"
+            name="firstname"
+            id="fname"
+            placeholder="John"
+            required
+          />
+        </div>
+        <div style="display: flex; flex-direction: column">
+          <label for="lname">Last name *</label>
+          <input
+            type="text"
+            name="lastname"
+            id="lname"
+            placeholder="Doe"
+            required
+          />
+        </div>
+        <div style="display: flex; flex-direction: column">
+          <label for="email">Email *</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="johndoe@gmail.com"
+            required
+          />
+        </div>
+        <div style="display: flex; flex-direction: column">
+          <label for="email">Confirm your email *</label>
+          <input
+            type="email"
+            name="confirmEmail"
+            id="confirmEmail"
+            placeholder="johndoe@gmail.com"
+            required
+          />
+        </div>
+        <div style="display: flex; flex-direction: column">
+          <label for="phone">Phone *</label>
+          <input
+            type="number"
+            name="phone"
+            id="phone"
+            placeholder="9234567890"
+            required
+          />
+        </div>
+        <div style="display: flex; flex-direction: column">
+          <label for="residense">Place of residense *</label>
+          <input
+            type="text"
+            name="place"
+            id="place"
+            placeholder="Ahmedabad, India"
+            required
+          />
+        </div>
+
+        <label for="file">Upload your resume *</label>
+        <input type="file" name="file" id="file" required />
+
+        <button
+          type="submit"
+          style="
+            grid-column: span 2;
+            padding: 1%;
+            font-size: large;
+            cursor: pointer;
+          "
+        >
+          Submit my application
+        </button>
+      </form>
+    </section>
+  </body>
+</html>
